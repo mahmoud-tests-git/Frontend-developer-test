@@ -1,0 +1,56 @@
+{
+  "carousel": [
+    {
+      "id": 1,
+      "img": "/bags.webp"
+    },
+    {
+      "id": 2,
+      "img": "/electronics.webp"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "title": "watch1",
+      "price": 19800,
+      "img": "/product1.webp",
+      "isNew": true
+    },
+    {
+      "id": 2,
+      "title": "watch2",
+      "price": 17500,
+      "img": "/product2.webp",
+      "isNew": true
+    },
+    {
+      "id": 3,
+      "title": "coffeeMachine",
+      "price": 4200,
+      "img": "/product3.webp",
+      "isNew": true
+    },
+    {
+      "id": 4,
+      "title": "t-shirt",
+      "price": 390,
+      "img": "/product4.webp",
+      "isNew": true
+    },
+    {
+      "id": 5,
+      "title": "neck Tie",
+      "price": 650,
+      "img": "/product5.webp",
+      "isNew": true
+    },
+    {
+      "id": 6,
+      "title": "hat",
+      "price": 480,
+      "img": "/product6.webp",
+      "isNew": true
+    }
+  ]
+}
