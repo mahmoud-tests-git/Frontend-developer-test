@@ -10,11 +10,19 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "eslint": "eslint . --ext .js,.ts,.tsx",
-    "eslint:fix": "eslint . --ext .js,.ts,.tsx --fix"
+    "eslint:fix": "eslint . --ext .js,.ts,.tsx --fix",
+    "lingui:extract": "lingui extract",
+    "lingui:compile": "lingui compile",
+    "lingui:extract-compile": "lingui extract --clean && lingui compile",
+    "prebuild": "npm run lingui:compile"
   },
   "dependencies": {
+    "@lingui/core": "^5.4.0",
+    "@lingui/macro": "^5.4.0",
+    "@lingui/react": "^5.4.0",
     "@reduxjs/toolkit": "^2.8.2",
     "@shadcn/ui": "^0.0.4",
+    "eslint-plugin-lingui": "^0.10.1",
     "framer-motion": "^12.23.12",
     "next": "15.4.5",
     "react": "19.1.0",
@@ -23,6 +31,9 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@lingui/cli": "^5.4.0",
+    "@lingui/loader": "^5.4.0",
+    "@lingui/swc-plugin": "^5.6.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
