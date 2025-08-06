@@ -12,6 +12,27 @@ const compat = new FlatCompat({
 const eslintConfig = [
   ...compat.extends('next/core-web-vitals', 'next/typescript'),
   ...compat.extends('plugin:prettier/recommended'),
+  {
+    rules: {
+      'react/react-in-jsx-scope': 'off',
+      '@typescript-eslint/explicit-function-return-type': 'off',
+      'import/order': [
+        'warn',
+        {
+          groups: [
+            'builtin',
+            'external',
+            'internal',
+            'parent',
+            'sibling',
+            'index',
+          ],
+          'newlines-between': 'always',
+        },
+      ],
+      'no-console': 'warn',
+    },
+  },
 ];
 
 export default eslintConfig;
