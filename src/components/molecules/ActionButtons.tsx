@@ -6,6 +6,7 @@ import { Button } from '../ui/button';
 import IconButton from '../atoms/IconButton';
 
 import MobileMenu from './MobileMenu';
+import LoginDialog from '../organisms/LoginDialog';
 
 interface ActionButtonsProps {
   onSearchClick?: () => void;
@@ -32,11 +33,13 @@ export default function ActionButtons({
         aria-label="Search"
       />
 
-      <IconButton
-        icon={<UserIcon className="w-5 h-5" />}
-        onClick={onUserClick}
-        aria-label="User menu"
-      />
+      <LoginDialog>
+        <IconButton
+          icon={<UserIcon className="w-5 h-5" />}
+          onClick={onUserClick}
+          aria-label="User menu"
+        />
+      </LoginDialog>
     </div>
   );
 }
