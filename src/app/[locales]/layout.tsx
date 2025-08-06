@@ -1,6 +1,8 @@
 // src/app/[locales]/layout.tsx
 import { LinguiClientProvider } from '@/components/dev/LinguiClientProvider';
 import { allMessages } from '@/appRouterI18n';
+import Header from '@/components/organisms/Header';
+import Footer from '@/components/organisms/footer';
 
 export default function LocaleLayout({
   children,
@@ -13,7 +15,11 @@ export default function LocaleLayout({
 
   return (
     <LinguiClientProvider initialLocale={locales} initialMessages={messages}>
-      {children}
+      <div className="flex flex-col ">
+        <Header />
+        {children}
+        <Footer />
+      </div>
     </LinguiClientProvider>
   );
 }

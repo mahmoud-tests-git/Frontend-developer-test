@@ -28,7 +28,7 @@ export default function ProductCard({
   badge,
   onBuyClick,
   onFavoriteToggle,
-  className = 'w-72 overflow-hidden relative',
+  className = ' overflow-hidden relative',
 }: ProductCardProps) {
   const [isFavorited, setIsFavorited] = useState(false);
 

@@ -9,12 +9,11 @@ import CarouselControls from '../molecules/CarouselControls';
 export default function ProductsCarousel({
   products,
 }: {
-  products: { id: number; src: string; alt: string }[];
+  products: { id: number; img: string }[];
 }) {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
-
   useEffect(() => {
     if (!api) {
       return;
@@ -33,15 +32,15 @@ export default function ProductsCarousel({
   };
 
   return (
-    <div className="container h-96 relative">
+    <div className=" h-96 relative">
       <Carousel className="p-0" setApi={setApi}>
         <CarouselContent className="p-0">
           {products.map((product) => (
             <ProductSlide
               key={product.id}
               id={product.id}
-              src={product.src}
-              alt={product.alt}
+              src={product.img}
+              alt={product.img}
             />
           ))}
         </CarouselContent>
