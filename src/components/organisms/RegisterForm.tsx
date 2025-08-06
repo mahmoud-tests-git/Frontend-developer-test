@@ -6,13 +6,14 @@ import { ArrowLeftIcon, ChevronRightIcon } from 'lucide-react';
 import { useLingui } from '@lingui/react';
 import { t } from '@lingui/core/macro';
 
-import { Form } from '../ui/form';
+import { Form, FormMessage } from '../ui/form';
 import FormHeader from '../atoms/FormHeader';
 import FormInput from '../atoms/FormInput';
 import FormCheckbox from '../atoms/FormCheckbox';
 import SubmitButton from '../atoms/SubmitButton';
 import FormSection from '../molecules/FormSection';
 import FormNavigation from '../molecules/FormNavigation';
+import { redirect } from 'next/navigation';
 
 const formSchema = z.object({
   identityCode: z
@@ -52,8 +53,24 @@ export default function RegisterForm() {
       terms: false,
     },
   });
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    const data = await fetch('https://api.calvero.club/auth/join', {
+      method: 'POST',
+      body: JSON.stringify({
+        identityCode: values.identityCode,
+        givenName: values.name,
+        surname: values.surname,
+        contactEmail: values.email,
+        secureKey: values.secureKey,
+      }),
+    });
+    if (data.ok) {
+      redirect('/');
+    } else {
+      form.setError('root', {
+        message: t(i18n)`Something went wrong`,
+      });
+    }
   }
   return (
     <div className="w-full p-8 mx-auto flex flex-col gap-4">
@@ -119,7 +136,9 @@ export default function RegisterForm() {
               )`Minimum 6 characters. This key secures your Calvero identity.`}
               type="password"
             />
-
+            {form.formState.errors.root && (
+              <FormMessage>{form.formState.errors.root.message}</FormMessage>
+            )}
             <SubmitButton>
               {t(i18n)`Activate Calvero Identity`}{' '}
               <ChevronRightIcon className="w-4 h-4" />
