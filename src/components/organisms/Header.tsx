@@ -6,6 +6,7 @@ import Logo from '../atoms/Logo';
 import DesktopNavigation from '../molecules/DesktopNavigation';
 import ActionButtons from '../molecules/ActionButtons';
 import SearchCards from '../molecules/SearchCard';
+import DesktopNavigationContainer from './DesktopNavigationContainer';
 export default function Header() {
   const [navOpen, setNavOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -31,7 +32,7 @@ export default function Header() {
       <header className="flex justify-between items-center py-3 relative z-40">
         <Logo />
 
-        <DesktopNavigation open={navOpen} onOpenChange={setNavOpen} />
+        <DesktopNavigationContainer open={navOpen} onOpenChange={setNavOpen} />
 
         <ActionButtons
           onSearchClick={handleSearchClick}

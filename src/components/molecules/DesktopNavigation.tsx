@@ -7,24 +7,16 @@ import {
   HoverCardTrigger,
 } from '../ui/hover-card';
 import NavItem from '../atoms/NavItem';
+import { NavigationData } from '../organisms/DesktopNavigationContainer';
 
 interface DesktopNavigationProps {
-  title: string;
+  data: NavigationData;
   onOpenChange?: (open: boolean) => void;
   open?: boolean;
-  navItems: {
-    title: string;
-    id: number;
-    subCategories: {
-      id: number;
-      title: string;
-    }[];
-  }[];
 }
 
 export default function DesktopNavigation({
-  title,
-  navItems,
+  data,
   onOpenChange,
   open = false,
 }: DesktopNavigationProps) {
@@ -37,7 +29,7 @@ export default function DesktopNavigation({
     >
       <HoverCardTrigger asChild className="hidden lg:block">
         <Button variant="ghost">
-          <h2>{title}</h2>
+          <h2>{data.title}</h2>
         </Button>
       </HoverCardTrigger>
       <HoverCardContent
@@ -46,7 +38,7 @@ export default function DesktopNavigation({
         align="center"
       >
         <nav className="container mx-auto flex w-1/2 mx-auto flex-col gap-4">
-          {navItems.map((item) => (
+          {data.navItems.map((item) => (
             <>
               <NavItem
                 key={item.id}
@@ -58,7 +50,9 @@ export default function DesktopNavigation({
               {item.subCategories &&
                 item.subCategories.map((subItem) => (
                   <NavItem key={subItem.id} href={`/category/${subItem.id}`}>
-                    <h3>{subItem.title}</h3>
+                    <h3 className="text-gray-500 font-normal">
+                      {subItem.title}
+                    </h3>
                   </NavItem>
                 ))}
             </>
