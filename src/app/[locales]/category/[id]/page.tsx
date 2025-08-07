@@ -1,14 +1,29 @@
 import CategoiresHeader from '@/components/organisms/CategoiresHeader';
 import { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 
 export async function generateMetadata({
   params,
 }: {
   params: { id: string };
 }): Promise<Metadata> {
-  const data = await fetch(`https://api.calvero.club/categories/${params.id}`);
-  const json = await data.json();
-  console.log(json.metadata);
+  let json;
+  try {
+    json = await getCategory(params.id);
+  } catch (error) {
+    return {
+      title: 'Calvero - Categories',
+      description: 'Calvero - Categories',
+      keywords: 'Calvero, Categories',
+      authors: [{ name: 'Calvero' }],
+      creator: 'Calvero',
+      openGraph: {
+        type: 'website',
+        url: process.env.NEXT_PUBLIC_SITE_URL + '/category/' + params.id,
+      },
+    };
+  }
+
   const metadata = {
     title: json.metadata.title,
     description: json.metadata.description,
@@ -48,11 +63,33 @@ export default async function CategoryPage({
 }: {
   params: { id: string };
 }) {
-  const data = await fetch(`https://api.calvero.club/categories/${params.id}`);
-  const json = await data.json();
+  let json;
+  try {
+    json = await getCategory(params.id);
+  } catch (error) {
+    notFound();
+  }
   return (
     <div className="container mx-auto flex flex-col gap-10 mt-10 pb-10">
       <CategoiresHeader title={json.name} description={json.description} />
     </div>
   );
+}
+
+async function getCategory(id: string) {
+  try {
+    const calveroApiUrl = process.env.NEXT_PUBLIC_CALVERO_API_URL;
+    const response = await fetch(`${calveroApiUrl}/categories/${id}`, {
+      next: {
+        revalidate: 3600,
+      },
+    });
+    if (!response.ok) {
+      throw new Error(`Failed to fetch category: ${response.status}`);
+    }
+    return await response.json();
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
 }
