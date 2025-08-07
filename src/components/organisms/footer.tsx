@@ -30,7 +30,7 @@ export default function Footer() {
           <ScrollingText text="Calevro" />
         </div>
         <div>
-          <nav className="flex flex-col gap-6">
+          <nav className="flex flex-col gap-6 lg:flex-row">
             <FooterNavSection title="Company">
               <NavItem
                 href="/"
@@ -57,12 +57,14 @@ export default function Footer() {
                 Help
               </NavItem>
             </FooterNavSection>
-            <FooterNavSection title="Follow Us">
-              <SocialLinks iconClassName="rounded-full size-12 bg-gray-200 grid place-items-center hover:bg-gray-300" />
-            </FooterNavSection>
-            <FooterNavSection title="Contact Us">
-              <ContactSection />
-            </FooterNavSection>
+            <div className="flex flex-col gap-6 flex-1">
+              <FooterNavSection title="Follow Us">
+                <SocialLinks iconClassName="rounded-full size-12 bg-gray-200 grid place-items-center hover:bg-gray-300" />
+              </FooterNavSection>
+              <FooterNavSection title="Contact Us">
+                <ContactSection />
+              </FooterNavSection>
+            </div>
           </nav>
         </div>
         <div className="border-t border-gray-200 py-6">
