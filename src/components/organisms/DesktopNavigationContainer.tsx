@@ -23,10 +23,10 @@ export default function DesktopNavigationContainer({
   onOpenChange: (open: boolean) => void;
   open: boolean;
 }) {
-  const calveroApiUrl = process.env.NEXT_PUBLIC_CALVERO_API_URL;
+  const url = process.env.NEXT_PUBLIC_SITE_URL;
   return (
     <DataContainer<NavigationData>
-      url={`${calveroApiUrl}/categories`}
+      url={`${url}/api/proxy/categories`}
       transform={transformDesktopNavigation}
       loadingComponent={<Skeleton className="w-24 h-10" />}
     >
