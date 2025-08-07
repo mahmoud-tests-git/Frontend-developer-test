@@ -24,6 +24,15 @@ const nextConfig: NextConfig = {
       ],
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/favicon.ico',
+        destination: '/favicon.webp',
+        statusCode: 301,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
