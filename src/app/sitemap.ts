@@ -57,34 +57,43 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 }
 
 const getCategories = async () => {
-  const response = await fetch('https://api.calvero.club/categories');
-  if (!response.ok) {
+  try {
+    const calveroApiUrl = process.env.NEXT_PUBLIC_CALVERO_API_URL;
+
+    const response = await fetch(`${calveroApiUrl}/categories`);
+    if (!response.ok) {
+      return [];
+    }
+    const data = await response.json();
+    const dataTransformed = transformDesktopNavigation(data);
+
+    return dataTransformed.navItems.flatMap((category) => {
+      const main = {
+        url: `${host}/category/${category.id}`,
+        lastModified: new Date(),
+        alternates: {
+          languages: {
+            en: `${host}/en/category/${category.id}`,
+            tr: `${host}/tr/category/${category.id}`,
+          },
+        },
+        priority: 0.8,
+      };
+      const subCategories = category.subCategories.map((subCategory) => ({
+        url: `${host}/category/${subCategory.id}`,
+        lastModified: new Date(),
+        alternates: {
+          languages: {
+            en: `${host}/en/category/${subCategory.id}`,
+            tr: `${host}/tr/category/${subCategory.id}`,
+          },
+        },
+        priority: 0.8,
+      }));
+      return [main, ...subCategories];
+    });
+  } catch (error) {
+    console.error(error);
     return [];
   }
-  const dataTransformed = transformDesktopNavigation(await response.json());
-  return dataTransformed.navItems.flatMap((category) => {
-    const main = {
-      url: `${host}/category/${category.id}`,
-      lastModified: new Date(),
-      alternates: {
-        languages: {
-          en: `${host}/en/category/${category.id}`,
-          tr: `${host}/tr/category/${category.id}`,
-        },
-      },
-      priority: 0.8,
-    };
-    const subCategories = category.subCategories.map((subCategory) => ({
-      url: `${host}/category/${subCategory.id}`,
-      lastModified: new Date(),
-      alternates: {
-        languages: {
-          en: `${host}/en/category/${subCategory.id}`,
-          tr: `${host}/tr/category/${subCategory.id}`,
-        },
-      },
-      priority: 0.8,
-    }));
-    return [main, ...subCategories];
-  });
 };
