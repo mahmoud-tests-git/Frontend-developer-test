@@ -54,16 +54,19 @@ export default function RegisterForm() {
     },
   });
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    const data = await fetch('https://api.calvero.club/auth/join', {
-      method: 'POST',
-      body: JSON.stringify({
-        identityCode: values.identityCode,
-        givenName: values.name,
-        surname: values.surname,
-        contactEmail: values.email,
-        secureKey: values.secureKey,
-      }),
-    });
+    const data = await fetch(
+      `${process.env.NEXT_PUBLIC_CALVERO_API_URL}/auth/join`,
+      {
+        method: 'POST',
+        body: JSON.stringify({
+          identityCode: values.identityCode,
+          givenName: values.name,
+          surname: values.surname,
+          contactEmail: values.email,
+          secureKey: values.secureKey,
+        }),
+      },
+    );
     if (data.ok) {
       redirect('/');
     } else {
