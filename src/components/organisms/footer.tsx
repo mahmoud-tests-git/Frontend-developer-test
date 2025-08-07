@@ -2,7 +2,7 @@ import { InstagramIcon, TwitterIcon } from 'lucide-react';
 import { t } from '@lingui/macro';
 import { useLingui } from '@lingui/react';
 
-import NavItem from '../atoms/NavItem';
+import NavItem from '../atoms/NaviItem';
 import ScrollingText from '../atoms/ScrollingText';
 import Copyright from '../atoms/Copyright';
 import SocialCard from '../molecules/SocialCard';

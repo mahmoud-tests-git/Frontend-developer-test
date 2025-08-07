@@ -6,7 +6,7 @@ import {
   HoverCardContent,
   HoverCardTrigger,
 } from '../ui/hover-card';
-import NavItem from '../atoms/NavItem';
+import NavItem from '../atoms/NaviItem';
 import { NavigationData } from '../organisms/DesktopNavigationContainer';
 
 interface DesktopNavigationProps {

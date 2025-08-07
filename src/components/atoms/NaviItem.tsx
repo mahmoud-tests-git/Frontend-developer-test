@@ -20,7 +20,10 @@ export default function NavItem({
   };
 
   return (
-    <Link href={href} className={`${variantClasses[variant]} ${className}`}>
+    <Link
+      href={href}
+      className={`${variantClasses[variant]} ${className} text-black`}
+    >
       {children}
     </Link>
   );
