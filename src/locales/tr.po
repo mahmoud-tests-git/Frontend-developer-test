@@ -8,11 +8,209 @@ msgstr ""
 "Language: tr\n"
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: \n"
+"PO-Revision-Date: 2025-08-07 16:00+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Plural-Forms: \n"
+"Plural-Forms: nplurals=2; plural=(n>1);\n"
+
+#: src/components/molecules/PopularSearches.tsx:30
+msgid "{term}"
+msgstr "{term}"
+
+#: src/components/organisms/RegisterForm.tsx:143
+msgid "Activate Calvero Identity"
+msgstr "Calvero Kimliğini Etkinleştir"
+
+#: src/components/atoms/FavoriteButton.tsx:33
+msgid "Add to favorites"
+msgstr "Favorilere ekle"
+
+#: src/components/atoms/Copyright.tsx:17
+msgid "All rights reserved."
+msgstr "Her hakkı saklıdır"
+
+#: src/components/organisms/RegisterForm.tsx:158
+msgid "Already part of Calvero?"
+msgstr "Zaten Calvero ailesinde misin?"
+
+#: src/components/molecules/FormNavigation.tsx:42
+msgid "Back to Home"
+msgstr "Ana Sayfaya Dön"
+
+#: src/components/atoms/BuyButton.tsx:37
+msgid "Buy Now"
+msgstr "Şimdi Satın Al"
+
+#: src/components/atoms/CancelButton.tsx:30
+msgid "Cancel"
+msgstr "İptal"
+
+#: src/components/molecules/MobileMenu.tsx:36
+msgid "Clothing"
+msgstr "Giyim"
+
+#: src/components/organisms/footer.tsx:36
+msgid "Company"
+msgstr "Şirket"
+
+#: src/components/organisms/RegisterForm.tsx:121
+msgid "Contact Email"
+msgstr "İletişim E-postası"
+
+#: src/components/organisms/footer.tsx:66
+msgid "Contact Us"
+msgstr "Bize Ulaşın"
+
+#: src/components/organisms/LoginForm.tsx:114
+#: src/components/organisms/RegisterForm.tsx:78
+msgid "Create Your Calvero ID"
+msgstr "Calvero Kimliğini Oluştur"
+
+#: src/components/organisms/RegisterForm.tsx:92
+msgid "Create your exclusive Calvero ID. Letters, numbers, and underscores only."
+msgstr "Özel Calvero Kimliğini oluştur. Yalnızca harf, rakam ve alt çizgi kullan."
+
+#: src/components/organisms/RegisterForm.tsx:122
+msgid "Email"
+msgstr "E-posta"
+
+#: src/components/organisms/LoginForm.tsx:99
+msgid "Enter Calvero"
+msgstr "Calvero'ya Gir"
+
+#: src/components/organisms/RegisterForm.tsx:79
+msgid "Enter the circle of timeless elegance. Complete the form below to begin your journey with Calvero."
+msgstr "Zamansız zarafet çemberine gir. Calvero yolculuğunu başlatmak için aşağıdaki formu doldur."
+
+#: src/components/organisms/LoginForm.tsx:84
+msgid "Enter your Calvero ID, email, or username."
+msgstr "Calvero Kimliğini, e-postanı veya kullanıcı adını gir."
+
+#: src/components/organisms/RegisterForm.tsx:112
+msgid "Family name for identity verification in Calvero's system."
+msgstr "Calvero sisteminde kimlik doğrulaması için soyadınız."
+
+#: src/app/[locales]/favourites/page.tsx:24
+msgid "Favourites"
+msgstr "Favoriler"
+
+#: src/components/organisms/footer.tsx:63
+msgid "Follow Us"
+msgstr "Bizi takip edin"
+
+#: src/components/organisms/footer.tsx:59
+msgid "Help"
+msgstr "Yardım"
+
+#: src/components/organisms/footer.tsx:41
+msgid "Home"
+msgstr "Ana sayfa"
+
+#: src/components/organisms/RegisterForm.tsx:150
+msgid "I agree to the terms and conditions"
+msgstr "Şartlar ve koşulları kabul ediyorum"
+
+#: src/components/organisms/LoginForm.tsx:82
+#: src/components/organisms/LoginForm.tsx:83
+#: src/components/organisms/RegisterForm.tsx:90
+#: src/components/organisms/RegisterForm.tsx:91
+msgid "Identity Code"
+msgstr "Kimlik Kodu"
+
+#: src/components/organisms/LoginForm.tsx:59
+#: src/components/organisms/LoginForm.tsx:62
+msgid "Invalid credentials"
+msgstr "Geçersiz bilgiler"
+
+#: src/components/organisms/footer.tsx:47
+msgid "Login"
+msgstr "Giriş yapmak"
+
+#: src/components/organisms/RegisterForm.tsx:134
+msgid "Minimum 6 characters. This key secures your Calvero identity."
+msgstr "En az 6 karakter. Bu anahtar Calvero kimliğinizi korur."
+
+#: src/components/organisms/RegisterForm.tsx:101
+#: src/components/organisms/RegisterForm.tsx:102
+msgid "Name"
+msgstr "Ad"
+
+#: src/components/organisms/LoginForm.tsx:113
+msgid "New to Calvero?"
+msgstr "Calvero'da yeni misin?"
+
+#: src/app/[locales]/favourites/page.tsx:42
+msgid "No favourites yet"
+msgstr "Henüz favori yok"
+
+#: src/components/molecules/PopularSearches.tsx:25
+msgid "Popular Search Terms"
+msgstr "Popüler Arama Terimleri"
+
+#: src/components/organisms/footer.tsx:53
+msgid "Register"
+msgstr "Kayıt olmak"
+
+#: src/components/atoms/FavoriteButton.tsx:33
+msgid "Remove from favorites"
+msgstr "Favorilerden kaldır"
+
+#: src/components/atoms/SearchInput.tsx:32
+msgid "Search..."
+msgstr "Ara..."
+
+#: src/components/organisms/LoginForm.tsx:90
+#: src/components/organisms/LoginForm.tsx:91
+#: src/components/organisms/RegisterForm.tsx:132
+#: src/components/organisms/RegisterForm.tsx:133
+msgid "Secure Key"
+msgstr "Güvenlik Anahtarı"
+
+#: src/components/organisms/RegisterForm.tsx:159
+msgid "Sign In"
+msgstr "Giriş Yap"
+
+#: src/components/organisms/LoginForm.tsx:71
+msgid "Sign in to your Calvero ID and return to where you belong — among the bold."
+msgstr "Calvero Kimliğinle giriş yap ve ait olduğun yere — cesurlar arasına — geri dön."
+
+#: src/components/molecules/DesktopNavigation.tsx:46
+#~ msgid "Slim fits"
+#~ msgstr "Slim kesimler"
+
+#: src/components/organisms/RegisterForm.tsx:71
+msgid "Something went wrong"
+msgstr "Bir şeyler ters gitti"
+
+#: src/components/organisms/LoginForm.tsx:105
+msgid "Stay logged in"
+msgstr "Oturumu açık tut"
+
+#: src/components/organisms/RegisterForm.tsx:110
+#: src/components/organisms/RegisterForm.tsx:111
+msgid "Surname"
+msgstr "Soyad"
 
 #: src/app/[locales]/test/page.tsx:7
-msgid "Test"
-msgstr "تست"
+#~ msgid "Test"
+#~ msgstr "Test"
+
+#: src/app/[locales]/favourites/page.tsx:25
+msgid "The products you love"
+msgstr "Sevdiğiniz ürünler"
+
+#: src/components/organisms/RegisterForm.tsx:123
+msgid "Used to verify your identity and receive Calvero exclusives."
+msgstr "Kimliğinizi doğrulamak ve Calvero ayrıcalıkları almak için kullanılır."
+
+#: src/components/organisms/LoginForm.tsx:70
+msgid "Welcome Back to Calvero"
+msgstr "Calvero'ya Tekrar Hoş Geldin"
+
+#: src/components/organisms/RegisterForm.tsx:103
+msgid "Your first name, exactly as it appears on official records."
+msgstr "Resmi belgelerde göründüğü şekliyle adınız."
+
+#: src/components/organisms/LoginForm.tsx:92
+msgid "Your private secure key. Minimum 6 characters."
+msgstr "Özel güvenlik anahtarınız. En az 6 karakter."
