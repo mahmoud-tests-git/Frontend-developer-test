@@ -7,8 +7,11 @@ import DesktopNavigation from '../molecules/DesktopNavigation';
 import ActionButtons from '../molecules/ActionButtons';
 import SearchCards from '../molecules/SearchCard';
 import DesktopNavigationContainer from './DesktopNavigationContainer';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
+import { i18n } from '@lingui/core';
 export default function Header() {
+  const pathname = usePathname();
+
   const router = useRouter();
   const [navOpen, setNavOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -21,6 +24,14 @@ export default function Header() {
 
   const handleFavouritesClick = () => {
     router.push('/favourites');
+  };
+
+  const handleChangeLanguage = () => {
+    const pathLocale = pathname.split('/')[1];
+    const newLocale = pathLocale === 'tr' ? 'en' : 'tr';
+    i18n.activate(newLocale);
+    const newPath = pathname.split('/').slice(2).join('/');
+    router.push(`/${newLocale}/${newPath}`);
   };
 
   return (
@@ -44,6 +55,7 @@ export default function Header() {
           onSearchClick={handleSearchClick}
           onUserClick={handleUserClick}
           onFavouritesClick={handleFavouritesClick}
+          onChangeLanguage={handleChangeLanguage}
         />
       </header>
       {searchOpen && <SearchCards onCancel={() => setSearchOpen(false)} />}

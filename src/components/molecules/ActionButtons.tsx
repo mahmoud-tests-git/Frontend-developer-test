@@ -1,6 +1,12 @@
 'use client';
 
-import { HeartIcon, MenuIcon, SearchIcon, UserIcon } from 'lucide-react';
+import {
+  GlobeIcon,
+  HeartIcon,
+  MenuIcon,
+  SearchIcon,
+  UserIcon,
+} from 'lucide-react';
 
 import { Button } from '../ui/button';
 import IconButton from '../atoms/IconButton';
@@ -12,12 +18,14 @@ interface ActionButtonsProps {
   onSearchClick?: () => void;
   onUserClick?: () => void;
   onFavouritesClick?: () => void;
+  onChangeLanguage?: () => void;
 }
 
 export default function ActionButtons({
   onSearchClick,
   onUserClick,
   onFavouritesClick,
+  onChangeLanguage,
 }: ActionButtonsProps) {
   return (
     <div className="flex ">
@@ -37,6 +45,11 @@ export default function ActionButtons({
         icon={<SearchIcon className="w-5 h-5" />}
         onClick={onSearchClick}
         aria-label="Search"
+      />
+      <IconButton
+        icon={<GlobeIcon className="w-5 h-5" />}
+        onClick={onChangeLanguage}
+        aria-label="Change Language"
       />
 
       <LoginDialog>
