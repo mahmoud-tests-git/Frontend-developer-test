@@ -13,6 +13,204 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#: src/components/molecules/PopularSearches.tsx:30
+msgid "{term}"
+msgstr "{term}"
+
+#: src/components/organisms/RegisterForm.tsx:143
+msgid "Activate Calvero Identity"
+msgstr "Activate Calvero Identity"
+
+#: src/components/atoms/FavoriteButton.tsx:33
+msgid "Add to favorites"
+msgstr "Add to favorites"
+
+#: src/components/atoms/Copyright.tsx:17
+msgid "All rights reserved."
+msgstr "All rights reserved."
+
+#: src/components/organisms/RegisterForm.tsx:158
+msgid "Already part of Calvero?"
+msgstr "Already part of Calvero?"
+
+#: src/components/molecules/FormNavigation.tsx:42
+msgid "Back to Home"
+msgstr "Back to Home"
+
+#: src/components/atoms/BuyButton.tsx:37
+msgid "Buy Now"
+msgstr "Buy Now"
+
+#: src/components/atoms/CancelButton.tsx:30
+msgid "Cancel"
+msgstr "Cancel"
+
+#: src/components/molecules/MobileMenu.tsx:36
+msgid "Clothing"
+msgstr "Clothing"
+
+#: src/components/organisms/footer.tsx:36
+msgid "Company"
+msgstr "Company"
+
+#: src/components/organisms/RegisterForm.tsx:121
+msgid "Contact Email"
+msgstr "Contact Email"
+
+#: src/components/organisms/footer.tsx:66
+msgid "Contact Us"
+msgstr "Contact Us"
+
+#: src/components/organisms/LoginForm.tsx:114
+#: src/components/organisms/RegisterForm.tsx:78
+msgid "Create Your Calvero ID"
+msgstr "Create Your Calvero ID"
+
+#: src/components/organisms/RegisterForm.tsx:92
+msgid "Create your exclusive Calvero ID. Letters, numbers, and underscores only."
+msgstr "Create your exclusive Calvero ID. Letters, numbers, and underscores only."
+
+#: src/components/organisms/RegisterForm.tsx:122
+msgid "Email"
+msgstr "Email"
+
+#: src/components/organisms/LoginForm.tsx:99
+msgid "Enter Calvero"
+msgstr "Enter Calvero"
+
+#: src/components/organisms/RegisterForm.tsx:79
+msgid "Enter the circle of timeless elegance. Complete the form below to begin your journey with Calvero."
+msgstr "Enter the circle of timeless elegance. Complete the form below to begin your journey with Calvero."
+
+#: src/components/organisms/LoginForm.tsx:84
+msgid "Enter your Calvero ID, email, or username."
+msgstr "Enter your Calvero ID, email, or username."
+
+#: src/components/organisms/RegisterForm.tsx:112
+msgid "Family name for identity verification in Calvero's system."
+msgstr "Family name for identity verification in Calvero's system."
+
+#: src/app/[locales]/favourites/page.tsx:24
+msgid "Favourites"
+msgstr "Favourites"
+
+#: src/components/organisms/footer.tsx:63
+msgid "Follow Us"
+msgstr "Follow Us"
+
+#: src/components/organisms/footer.tsx:59
+msgid "Help"
+msgstr "Help"
+
+#: src/components/organisms/footer.tsx:41
+msgid "Home"
+msgstr "Home"
+
+#: src/components/organisms/RegisterForm.tsx:150
+msgid "I agree to the terms and conditions"
+msgstr "I agree to the terms and conditions"
+
+#: src/components/organisms/LoginForm.tsx:82
+#: src/components/organisms/LoginForm.tsx:83
+#: src/components/organisms/RegisterForm.tsx:90
+#: src/components/organisms/RegisterForm.tsx:91
+msgid "Identity Code"
+msgstr "Identity Code"
+
+#: src/components/organisms/LoginForm.tsx:59
+#: src/components/organisms/LoginForm.tsx:62
+msgid "Invalid credentials"
+msgstr "Invalid credentials"
+
+#: src/components/organisms/footer.tsx:47
+msgid "Login"
+msgstr "Login"
+
+#: src/components/organisms/RegisterForm.tsx:134
+msgid "Minimum 6 characters. This key secures your Calvero identity."
+msgstr "Minimum 6 characters. This key secures your Calvero identity."
+
+#: src/components/organisms/RegisterForm.tsx:101
+#: src/components/organisms/RegisterForm.tsx:102
+msgid "Name"
+msgstr "Name"
+
+#: src/components/organisms/LoginForm.tsx:113
+msgid "New to Calvero?"
+msgstr "New to Calvero?"
+
+#: src/app/[locales]/favourites/page.tsx:42
+msgid "No favourites yet"
+msgstr "No favourites yet"
+
+#: src/components/molecules/PopularSearches.tsx:25
+msgid "Popular Search Terms"
+msgstr "Popular Search Terms"
+
+#: src/components/organisms/footer.tsx:53
+msgid "Register"
+msgstr "Register"
+
+#: src/components/atoms/FavoriteButton.tsx:33
+msgid "Remove from favorites"
+msgstr "Remove from favorites"
+
+#: src/components/atoms/SearchInput.tsx:32
+msgid "Search..."
+msgstr "Search..."
+
+#: src/components/organisms/LoginForm.tsx:90
+#: src/components/organisms/LoginForm.tsx:91
+#: src/components/organisms/RegisterForm.tsx:132
+#: src/components/organisms/RegisterForm.tsx:133
+msgid "Secure Key"
+msgstr "Secure Key"
+
+#: src/components/organisms/RegisterForm.tsx:159
+msgid "Sign In"
+msgstr "Sign In"
+
+#: src/components/organisms/LoginForm.tsx:71
+msgid "Sign in to your Calvero ID and return to where you belong — among the bold."
+msgstr "Sign in to your Calvero ID and return to where you belong — among the bold."
+
+#: src/components/molecules/DesktopNavigation.tsx:46
+#~ msgid "Slim fits"
+#~ msgstr "Slim fits"
+
+#: src/components/organisms/RegisterForm.tsx:71
+msgid "Something went wrong"
+msgstr "Something went wrong"
+
+#: src/components/organisms/LoginForm.tsx:105
+msgid "Stay logged in"
+msgstr "Stay logged in"
+
+#: src/components/organisms/RegisterForm.tsx:110
+#: src/components/organisms/RegisterForm.tsx:111
+msgid "Surname"
+msgstr "Surname"
+
 #: src/app/[locales]/test/page.tsx:7
-msgid "Test"
-msgstr "Test"
+#~ msgid "Test"
+#~ msgstr "Test"
+
+#: src/app/[locales]/favourites/page.tsx:25
+msgid "The products you love"
+msgstr "The products you love"
+
+#: src/components/organisms/RegisterForm.tsx:123
+msgid "Used to verify your identity and receive Calvero exclusives."
+msgstr "Used to verify your identity and receive Calvero exclusives."
+
+#: src/components/organisms/LoginForm.tsx:70
+msgid "Welcome Back to Calvero"
+msgstr "Welcome Back to Calvero"
+
+#: src/components/organisms/RegisterForm.tsx:103
+msgid "Your first name, exactly as it appears on official records."
+msgstr "Your first name, exactly as it appears on official records."
+
+#: src/components/organisms/LoginForm.tsx:92
+msgid "Your private secure key. Minimum 6 characters."
+msgstr "Your private secure key. Minimum 6 characters."
