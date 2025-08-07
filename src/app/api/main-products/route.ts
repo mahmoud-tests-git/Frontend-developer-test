@@ -12,7 +12,7 @@ export async function GET() {
         headers: { 'Content-Type': 'application/json' },
       });
     }
-    const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+    const data = fs.readFileSync(filePath, 'utf8');
 
     return new Response(data, {
       status: 200,
