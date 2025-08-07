@@ -39,13 +39,13 @@ export default function Footer() {
                 Home
               </NavItem>
               <NavItem
-                href="/"
+                href="/login"
                 className="font-normal text-gray-600 hover:text-black"
               >
                 Login
               </NavItem>
               <NavItem
-                href="/"
+                href="/register"
                 className="font-normal text-gray-600 hover:text-black"
               >
                 Register
