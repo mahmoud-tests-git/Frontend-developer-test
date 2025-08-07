@@ -14,7 +14,7 @@ export default function ProductActions({
   currency = '$',
   onBuyClick,
   buyButtonLabel = 'Buy Now',
-  className = 'absolute bottom-0 right-0 p-0 w-full flex gap-12',
+  className = 'absolute bottom-0 right-0 p-0 w-full flex  gap-12',
 }: ProductActionsProps) {
   return (
     <div className={className}>

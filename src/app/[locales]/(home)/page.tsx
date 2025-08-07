@@ -7,7 +7,7 @@ export default async function Home() {
   return (
     <div className="container mx-auto flex flex-col gap-10 my-10 ">
       <ProductsCarousel products={json.carousel} />
-      <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 lg:gap-10 gap-6 place-items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-10 gap-6 place-items-center">
         {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
         {json.products.map((product: any) => (
           <ProductCard

@@ -67,7 +67,7 @@ export default function ProductCard({
           price={price}
           currency={currency}
           onBuyClick={handleBuyClick}
-          className="w-full flex gap-12"
+          className="w-full flex gap-6 "
         />
       </CardContent>
     </Card>
