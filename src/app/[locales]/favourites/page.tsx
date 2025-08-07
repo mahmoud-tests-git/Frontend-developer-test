@@ -1,6 +1,9 @@
 'use client';
 
-import ProductCard from '@/components/organisms/ProductCard';
+import { t } from '@lingui/core/macro';
+import { useLingui } from '@lingui/react';
+import { useSelector } from 'react-redux';
+
 import {
   Card,
   CardContent,
@@ -8,9 +11,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { t } from '@lingui/core/macro';
-import { useLingui } from '@lingui/react';
-import { useSelector } from 'react-redux';
+import ProductCard from '@/components/organisms/ProductCard';
 import { RootState } from '@/lib/store';
 
 export default function Home() {

@@ -1,6 +1,8 @@
-import type { MetadataRoute } from 'next';
 import path from 'path';
 import fs from 'fs/promises';
+
+import type { MetadataRoute } from 'next';
+
 import { transformDesktopNavigation } from '@/lib/transformers/DesktopNavigation';
 
 const host = process.env.NEXT_PUBLIC_SITE_URL || 'https://calvero.club';

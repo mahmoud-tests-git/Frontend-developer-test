@@ -1,9 +1,10 @@
 'use client';
 
 import { useEffect } from 'react';
-import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
+
+import { Button } from '@/components/ui/button';
 interface ErrorProps {
   error: Error;
   reset: () => void;

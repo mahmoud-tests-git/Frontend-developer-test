@@ -1,4 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
+
 import favoutriteReducer from './features/favoutriteSlice';
 
 export const store = configureStore({

@@ -1,4 +1,6 @@
 import { InstagramIcon, TwitterIcon } from 'lucide-react';
+import { t } from '@lingui/macro';
+import { useLingui } from '@lingui/react';
 
 import NavItem from '../atoms/NavItem';
 import ScrollingText from '../atoms/ScrollingText';
@@ -7,8 +9,6 @@ import SocialCard from '../molecules/SocialCard';
 import FooterNavSection from '../molecules/FooterNavSection';
 import SocialLinks from '../molecules/SocialLinks';
 import ContactSection from '../molecules/ContactSection';
-import { t } from '@lingui/macro';
-import { useLingui } from '@lingui/react';
 export default function Footer() {
   const { i18n } = useLingui();
   return (

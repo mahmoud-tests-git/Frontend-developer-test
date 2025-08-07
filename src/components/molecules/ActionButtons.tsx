@@ -10,9 +10,9 @@ import {
 
 import { Button } from '../ui/button';
 import IconButton from '../atoms/IconButton';
+import LoginDialog from '../organisms/LoginDialog';
 
 import MobileMenu from './MobileMenu';
-import LoginDialog from '../organisms/LoginDialog';
 
 interface ActionButtonsProps {
   onSearchClick?: () => void;

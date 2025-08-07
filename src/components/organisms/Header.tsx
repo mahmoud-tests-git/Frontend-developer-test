@@ -1,14 +1,14 @@
 'use client';
 
 import { useState } from 'react';
-
-import Logo from '../atoms/Logo';
-import DesktopNavigation from '../molecules/DesktopNavigation';
-import ActionButtons from '../molecules/ActionButtons';
-import SearchCards from '../molecules/SearchCard';
-import DesktopNavigationContainer from './DesktopNavigationContainer';
 import { usePathname, useRouter } from 'next/navigation';
 import { i18n } from '@lingui/core';
+
+import Logo from '../atoms/Logo';
+import ActionButtons from '../molecules/ActionButtons';
+import SearchCards from '../molecules/SearchCard';
+
+import DesktopNavigationContainer from './DesktopNavigationContainer';
 export default function Header() {
   const pathname = usePathname();
 

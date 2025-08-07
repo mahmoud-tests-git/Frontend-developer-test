@@ -1,13 +1,13 @@
+import Image from 'next/image';
+
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
-  DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog';
+
 import LoginForm from './LoginForm';
-import Image from 'next/image';
 
 export default function LoginDialog({
   children,

@@ -1,13 +1,12 @@
 'use client';
-import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { Card, CardContent } from '@/components/ui/card';
+import { RootState } from '@/lib/store';
+import { addFavourite, removeFavourite } from '@/lib/features/favoutriteSlice';
 
 import ProductImageContainer from '../molecules/ProductImageContainer';
 import ProductActions from '../molecules/ProductActions';
-import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '@/lib/store';
-import { addFavourite, removeFavourite } from '@/lib/features/favoutriteSlice';
 
 interface ProductCardProps {
   id: string;
@@ -32,7 +31,6 @@ export default function ProductCard({
   currency = '$',
   badge,
   onBuyClick,
-  onFavoriteToggle,
   className = ' overflow-hidden relative',
 }: ProductCardProps) {
   const dispatch = useDispatch();

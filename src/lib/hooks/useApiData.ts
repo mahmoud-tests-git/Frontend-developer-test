@@ -51,6 +51,7 @@ export function useApiData<T>({
 
   useEffect(() => {
     fetchData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [url, ...dependencies]);
 
   return { data, loading, error, refetch: fetchData };

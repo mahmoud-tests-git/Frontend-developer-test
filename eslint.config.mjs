@@ -35,7 +35,6 @@ const eslintConfig = [
           'newlines-between': 'always',
         },
       ],
-      'no-console': 'warn',
     },
   },
 ];

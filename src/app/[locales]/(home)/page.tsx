@@ -1,6 +1,7 @@
+import { notFound } from 'next/navigation';
+
 import ProductsCarousel from '@/components/organisms/ProductsCarousel';
 import ProductCard from '@/components/organisms/ProductCard';
-import { notFound } from 'next/navigation';
 
 type ProductType = {
   id: string;
@@ -31,6 +32,7 @@ export default async function Home() {
   let json;
   try {
     json = await getMainProducts();
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (error) {
     notFound();
   }

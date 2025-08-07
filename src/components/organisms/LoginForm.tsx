@@ -5,7 +5,8 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { ArrowLeftIcon, ChevronRightIcon } from 'lucide-react';
 import { useLingui } from '@lingui/react';
 import { t } from '@lingui/core/macro';
-import { toast } from 'sonner';
+import { redirect } from 'next/navigation';
+
 import { Form } from '../ui/form';
 import FormHeader from '../atoms/FormHeader';
 import FormInput from '../atoms/FormInput';
@@ -13,7 +14,6 @@ import FormCheckbox from '../atoms/FormCheckbox';
 import SubmitButton from '../atoms/SubmitButton';
 import FormSection from '../molecules/FormSection';
 import FormNavigation from '../molecules/FormNavigation';
-import { redirect } from 'next/navigation';
 
 const idRegex = /^[A-Za-z0-9_]{3,30}$/;
 

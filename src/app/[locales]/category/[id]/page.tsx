@@ -1,6 +1,7 @@
-import CategoiresHeader from '@/components/organisms/CategoiresHeader';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+
+import CategoiresHeader from '@/components/organisms/CategoiresHeader';
 
 export async function generateMetadata({
   params,
@@ -10,6 +11,7 @@ export async function generateMetadata({
   let json;
   try {
     json = await getCategory(params.id);
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (error) {
     return {
       title: 'Calvero - Categories',
@@ -66,6 +68,7 @@ export default async function CategoryPage({
   let json;
   try {
     json = await getCategory(params.id);
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (error) {
     notFound();
   }

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import '@/styles/globals.css';
 import { TooltipProvider } from '@radix-ui/react-tooltip';
+
 import { ReduxProvider } from '@/components/providers/reduxProvider';
 
 const geistSans = Geist({

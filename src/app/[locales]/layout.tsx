@@ -1,15 +1,12 @@
 // src/app/[locales]/layout.tsx
+import type { Metadata } from 'next';
+
 import { LinguiClientProvider } from '@/components/dev/LinguiClientProvider';
 import { allMessages } from '@/appRouterI18n';
 import Header from '@/components/organisms/Header';
 import Footer from '@/components/organisms/footer';
 import { withLinguiLayout } from '@/components/dev/withLingui';
-import type { Metadata } from 'next';
 
-type Props = {
-  children: React.ReactNode;
-  params: Promise<{ locales: string }>;
-};
 const metadata = {
   title: {
     tr: 'Calvero - Lüks Kemerler',

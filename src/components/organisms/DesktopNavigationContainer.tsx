@@ -1,9 +1,9 @@
-import DataContainer from './DataContainer';
+import { transformDesktopNavigation } from '@/lib/transformers/DesktopNavigation';
 
 import DesktopNavigation from '../molecules/DesktopNavigation';
-
-import { transformDesktopNavigation } from '@/lib/transformers/DesktopNavigation';
 import { Skeleton } from '../ui/skeleton';
+
+import DataContainer from './DataContainer';
 export type NavigationData = {
   title: string;
   navItems: {
