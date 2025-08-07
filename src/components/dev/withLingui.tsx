@@ -4,45 +4,47 @@ import { setI18n } from '@lingui/react/server';
 import { getI18nInstance } from '../../appRouterI18n';
 
 export type PageLangParam = {
-  params: {
-    locales: 'en' | 'tr';
-  };
+  params: Promise<{
+    locales: 'en' | 'tr' | 'pseudo';
+  }>;
 };
 
 type PageProps = PageLangParam & {
-  searchParams?: unknown; // in query
+  searchParams?: Promise<unknown>; // in query
 };
 
 type LayoutProps = PageLangParam & {
   children: React.ReactNode;
 };
 
-type PageExposedToNextJS<Props extends PageProps> = (props: Props) => ReactNode;
+type PageExposedToNextJS<Props extends PageProps> = (
+  props: Props,
+) => Promise<ReactNode>;
 
 export const withLinguiPage = <Props extends PageProps>(
-  AppRouterPage: React.ComponentType<PageLangParam & Props>,
+  AppRouterPage: React.ComponentType<{ locales: string } & Props>,
 ): PageExposedToNextJS<Props> => {
-  return function WithLingui(props) {
-    const lang = props.params.locales;
-    const i18n = getI18nInstance(lang);
+  return async function WithLingui(props) {
+    const { locales } = await props.params;
+    const i18n = getI18nInstance(locales);
     setI18n(i18n);
 
-    return <AppRouterPage {...props} lang={lang} />;
+    return <AppRouterPage {...props} locales={locales} />;
   };
 };
 
 type LayoutExposedToNextJS<Props extends LayoutProps> = (
   props: Props,
-) => ReactNode;
+) => Promise<ReactNode>;
 
 export const withLinguiLayout = <Props extends LayoutProps>(
-  AppRouterPage: React.ComponentType<PageLangParam & Props>,
+  AppRouterPage: React.ComponentType<{ locales: string } & Props>,
 ): LayoutExposedToNextJS<Props> => {
-  return function WithLingui(props) {
-    const lang = props.params.locales;
-    const i18n = getI18nInstance(lang);
+  return async function WithLingui(props) {
+    const { locales } = await props.params;
+    const i18n = getI18nInstance(locales);
     setI18n(i18n);
 
-    return <AppRouterPage {...props} lang={lang} />;
+    return <AppRouterPage {...props} locales={locales} />;
   };
 };

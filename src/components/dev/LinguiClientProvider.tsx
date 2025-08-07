@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 export function LinguiClientProvider({
   children,
-  initialLocale,
+  initialLocale = 'en',
   initialMessages,
 }: {
   children: React.ReactNode;
