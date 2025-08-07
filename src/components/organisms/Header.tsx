@@ -7,7 +7,9 @@ import DesktopNavigation from '../molecules/DesktopNavigation';
 import ActionButtons from '../molecules/ActionButtons';
 import SearchCards from '../molecules/SearchCard';
 import DesktopNavigationContainer from './DesktopNavigationContainer';
+import { useRouter } from 'next/navigation';
 export default function Header() {
+  const router = useRouter();
   const [navOpen, setNavOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
 
@@ -16,6 +18,10 @@ export default function Header() {
   };
 
   const handleUserClick = () => {};
+
+  const handleFavouritesClick = () => {
+    router.push('/favourites');
+  };
 
   return (
     <div className="container mx-auto px-4 border-b border-gray-200 relative">
@@ -37,6 +43,7 @@ export default function Header() {
         <ActionButtons
           onSearchClick={handleSearchClick}
           onUserClick={handleUserClick}
+          onFavouritesClick={handleFavouritesClick}
         />
       </header>
       {searchOpen && <SearchCards onCancel={() => setSearchOpen(false)} />}

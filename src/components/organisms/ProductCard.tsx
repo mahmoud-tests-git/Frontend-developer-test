@@ -5,8 +5,12 @@ import { Card, CardContent } from '@/components/ui/card';
 
 import ProductImageContainer from '../molecules/ProductImageContainer';
 import ProductActions from '../molecules/ProductActions';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '@/lib/store';
+import { addFavourite, removeFavourite } from '@/lib/features/favoutriteSlice';
 
 interface ProductCardProps {
+  id: string;
   src?: string;
   alt?: string;
   price?: number | string;
@@ -21,6 +25,7 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({
+  id,
   src = '/product2.webp',
   alt = 'product',
   price = '17,000',
@@ -30,12 +35,17 @@ export default function ProductCard({
   onFavoriteToggle,
   className = ' overflow-hidden relative',
 }: ProductCardProps) {
-  const [isFavorited, setIsFavorited] = useState(false);
+  const dispatch = useDispatch();
+  const isFavorited = useSelector((state: RootState) =>
+    state.favourites.favourites.some((favourite) => favourite.id === id),
+  );
 
   const handleFavoriteToggle = () => {
-    const newFavoriteState = !isFavorited;
-    setIsFavorited(newFavoriteState);
-    onFavoriteToggle?.(newFavoriteState);
+    if (isFavorited) {
+      dispatch(removeFavourite(id));
+    } else {
+      dispatch(addFavourite({ id, title: alt, price, img: src }));
+    }
   };
 
   const handleBuyClick = () => {

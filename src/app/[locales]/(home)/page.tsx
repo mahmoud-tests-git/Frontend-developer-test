@@ -11,11 +11,11 @@ export default async function Home() {
         {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
         {json.products.map((product: any) => (
           <ProductCard
+            id={product.id}
             key={product.id}
             src={product.img}
             alt={product.title}
             price={product.price}
-            currency={product.currency}
           />
         ))}
       </div>
