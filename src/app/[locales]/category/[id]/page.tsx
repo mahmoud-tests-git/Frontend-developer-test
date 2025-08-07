@@ -2,15 +2,12 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
 import CategoiresHeader from '@/components/organisms/CategoiresHeader';
-
-export async function generateMetadata({
-  params,
-}: {
-  params: { id: string };
-}): Promise<Metadata> {
+/* eslint-disable @typescript-eslint/no-explicit-any */
+export async function generateMetadata(params: any): Promise<Metadata> {
+  const { id } = await params;
   let json;
   try {
-    json = await getCategory(params.id);
+    json = await getCategory(id);
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (error) {
     return {
@@ -21,7 +18,7 @@ export async function generateMetadata({
       creator: 'Calvero',
       openGraph: {
         type: 'website',
-        url: process.env.NEXT_PUBLIC_SITE_URL + '/category/' + params.id,
+        url: process.env.NEXT_PUBLIC_SITE_URL + '/category/' + id,
       },
     };
   }
@@ -39,7 +36,7 @@ export async function generateMetadata({
     creator: 'Calvero',
     openGraph: {
       type: 'website',
-      url: process.env.NEXT_PUBLIC_SITE_URL + '/category/' + params.id,
+      url: process.env.NEXT_PUBLIC_SITE_URL + '/category/' + id,
       siteName: 'Calvero',
       title: metadata.title,
       description: metadata.description,
@@ -59,15 +56,12 @@ export async function generateMetadata({
     },
   };
 }
-
-export default async function CategoryPage({
-  params,
-}: {
-  params: { id: string };
-}) {
+/* eslint-disable @typescript-eslint/no-explicit-any */
+export default async function CategoryPage(params: any) {
+  const { id } = await params;
   let json;
   try {
-    json = await getCategory(params.id);
+    json = await getCategory(id);
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (error) {
     notFound();
